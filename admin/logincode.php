@@ -14,12 +14,12 @@
 		$usertypes		= mysqli_fetch_array($query_run);
 		if ($usertypes['usertype'] == "admin")
 		{
-			$_SESSION['username'] = $email_login;
+			$_SESSION['username'] = $fname.' '.$lname;
 			header('Location: index.php');
 		}
 		elseif ($usertypes['usertype'] == "user")
 		{
-			$_SESSION['username'] = $email_login;
+			$_SESSION['username'] = $fname.' '.$lname;
 			header('Location: ../index.php');
 		}
 		else
